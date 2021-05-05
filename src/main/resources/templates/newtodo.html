@@ -1,0 +1,58 @@
+<!DOCTYPE html SYSTEM "http://www.thymeleaf.org/dtd/xhtml1-strict-thymeleaf-spring4-4.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:th="http://www.thymeleaf.org">
+
+<head th:replace="header :: copy">
+
+
+</head>
+
+<body>
+
+
+
+	<div class="container" align="center">
+	
+		<hr>
+		<h2>Adding New TASK</h2>
+		<form action="#" th:action="@{/saveToDoRecord}" th:object="${todo}"
+			method="POST">
+			<input type="text" th:field="*{studentName}"
+				placeholder="Student Name" class="form-control mb-4 col-4" required="required">
+
+			<input type="text" th:field="*{studentId}" placeholder="Student ID"
+				class="form-control mb-4 col-4" required="required">
+				
+			<input type="text"
+				th:field="*{exercises}" placeholder="Exercises Marks"
+				class="form-control mb-4 col-4">
+				
+				<input type="text"
+				th:field="*{assignment1}" placeholder="Assignment No.1 Marks"
+				class="form-control mb-4 col-4">
+				
+				<input type="text"
+				th:field="*{assignment2}" placeholder="Assignment No.2 Marks"
+				class="form-control mb-4 col-4">
+				
+				<input type="text"
+				th:field="*{midterm}" placeholder="MidTerm Marks"
+				class="form-control mb-4 col-4">
+				
+				<input type="text"
+				th:field="*{finalexam}" placeholder="Final Exam Marks"
+				class="form-control mb-4 col-4">
+				
+				<input type="text"
+				th:field="*{finalproject}" placeholder="Final Project Marks"
+				class="form-control mb-4 col-4">
+				
+			<button type="submit" class="btn btn-info col-2">Save Student</button>
+		</form>
+
+	</div>
+
+	<div th:replace="footer :: copy"></div>
+
+</body>
+</html>
